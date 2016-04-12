@@ -1,0 +1,8 @@
+C:\Users\kenta\Documents\Visual Studio 2015\Projects\SQLCreater\SQLCreater\SQLCreater\bin\Release\SQLCreater.exe.config
+C:\Users\kenta\Documents\Visual Studio 2015\Projects\SQLCreater\SQLCreater\SQLCreater\bin\Release\SQLCreater.exe
+C:\Users\kenta\Documents\Visual Studio 2015\Projects\SQLCreater\SQLCreater\SQLCreater\bin\Release\SQLCreater.pdb
+C:\Users\kenta\Documents\Visual Studio 2015\Projects\SQLCreater\SQLCreater\SQLCreater\obj\Release\SQLCreater.Form1.resources
+C:\Users\kenta\Documents\Visual Studio 2015\Projects\SQLCreater\SQLCreater\SQLCreater\obj\Release\SQLCreater.Properties.Resources.resources
+C:\Users\kenta\Documents\Visual Studio 2015\Projects\SQLCreater\SQLCreater\SQLCreater\obj\Release\SQLCreater.csproj.GenerateResource.Cache
+C:\Users\kenta\Documents\Visual Studio 2015\Projects\SQLCreater\SQLCreater\SQLCreater\obj\Release\SQLCreater.exe
+C:\Users\kenta\Documents\Visual Studio 2015\Projects\SQLCreater\SQLCreater\SQLCreater\obj\Release\SQLCreater.pdb
