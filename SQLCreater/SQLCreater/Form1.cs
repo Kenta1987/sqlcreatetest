@@ -44,5 +44,10 @@ namespace SQLCreater
             }
 
         }
+
+        private void 切り取りTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

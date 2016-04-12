@@ -31,37 +31,39 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.testdataBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.testdataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aigsTestDataSet = new SQLCreater.AigsTestDataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.testdataBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.testdataDataGridView = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.切り取りTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.testdataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aigsTestDataSet = new SQLCreater.AigsTestDataSet();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.testdataTableAdapter = new SQLCreater.AigsTestDataSetTableAdapters.testdataTableAdapter();
             this.tableAdapterManager = new SQLCreater.AigsTestDataSetTableAdapters.TableAdapterManager();
+            this.iNSERT文作成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dELETE文作成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dELETEINSERT文作成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dROPCREATE文作成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.testdataBindingNavigator)).BeginInit();
             this.testdataBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.testdataDataGridView)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.testdataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aigsTestDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testdataDataGridView)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // testdataBindingNavigator
@@ -95,6 +97,41 @@
             this.testdataBindingNavigator.TabIndex = 0;
             this.testdataBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 31);
+            this.bindingNavigatorAddNewItem.Text = "新規追加";
+            // 
+            // testdataBindingSource
+            // 
+            this.testdataBindingSource.DataMember = "testdata";
+            this.testdataBindingSource.DataSource = this.aigsTestDataSet;
+            // 
+            // aigsTestDataSet
+            // 
+            this.aigsTestDataSet.DataSetName = "AigsTestDataSet";
+            this.aigsTestDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(59, 31);
+            this.bindingNavigatorCountItem.Text = "/ {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "項目の総数";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 31);
+            this.bindingNavigatorDeleteItem.Text = "削除";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -127,16 +164,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "現在の場所";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(59, 31);
-            this.bindingNavigatorCountItem.Text = "/ {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "項目の総数";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 34);
             // 
             // bindingNavigatorMoveNextItem
@@ -159,26 +189,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 34);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 31);
-            this.bindingNavigatorAddNewItem.Text = "新規追加";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 31);
-            this.bindingNavigatorDeleteItem.Text = "削除";
             // 
             // testdataBindingNavigatorSaveItem
             // 
@@ -203,28 +215,9 @@
             this.testdataDataGridView.Location = new System.Drawing.Point(12, 81);
             this.testdataDataGridView.Name = "testdataDataGridView";
             this.testdataDataGridView.RowTemplate.Height = 27;
+            this.testdataDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.testdataDataGridView.Size = new System.Drawing.Size(550, 338);
             this.testdataDataGridView.TabIndex = 1;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.切り取りTToolStripMenuItem,
-            this.toolStripMenuItem1});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(197, 42);
-            // 
-            // 切り取りTToolStripMenuItem
-            // 
-            this.切り取りTToolStripMenuItem.Name = "切り取りTToolStripMenuItem";
-            this.切り取りTToolStripMenuItem.Size = new System.Drawing.Size(196, 32);
-            this.切り取りTToolStripMenuItem.Text = "切り取り(&T)";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(193, 6);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -256,15 +249,16 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Created At";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // testdataBindingSource
+            // contextMenuStrip1
             // 
-            this.testdataBindingSource.DataMember = "testdata";
-            this.testdataBindingSource.DataSource = this.aigsTestDataSet;
-            // 
-            // aigsTestDataSet
-            // 
-            this.aigsTestDataSet.DataSetName = "AigsTestDataSet";
-            this.aigsTestDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iNSERT文作成ToolStripMenuItem,
+            this.dELETE文作成ToolStripMenuItem,
+            this.dELETEINSERT文作成ToolStripMenuItem,
+            this.dROPCREATE文作成ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(302, 132);
             // 
             // testdataTableAdapter
             // 
@@ -275,6 +269,30 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.testdataTableAdapter = this.testdataTableAdapter;
             this.tableAdapterManager.UpdateOrder = SQLCreater.AigsTestDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // iNSERT文作成ToolStripMenuItem
+            // 
+            this.iNSERT文作成ToolStripMenuItem.Name = "iNSERT文作成ToolStripMenuItem";
+            this.iNSERT文作成ToolStripMenuItem.Size = new System.Drawing.Size(301, 32);
+            this.iNSERT文作成ToolStripMenuItem.Text = "INSERT文作成";
+            // 
+            // dELETE文作成ToolStripMenuItem
+            // 
+            this.dELETE文作成ToolStripMenuItem.Name = "dELETE文作成ToolStripMenuItem";
+            this.dELETE文作成ToolStripMenuItem.Size = new System.Drawing.Size(301, 32);
+            this.dELETE文作成ToolStripMenuItem.Text = "DELETE文作成";
+            // 
+            // dELETEINSERT文作成ToolStripMenuItem
+            // 
+            this.dELETEINSERT文作成ToolStripMenuItem.Name = "dELETEINSERT文作成ToolStripMenuItem";
+            this.dELETEINSERT文作成ToolStripMenuItem.Size = new System.Drawing.Size(301, 32);
+            this.dELETEINSERT文作成ToolStripMenuItem.Text = "DELETE＆INSERT文作成";
+            // 
+            // dROPCREATE文作成ToolStripMenuItem
+            // 
+            this.dROPCREATE文作成ToolStripMenuItem.Name = "dROPCREATE文作成ToolStripMenuItem";
+            this.dROPCREATE文作成ToolStripMenuItem.Size = new System.Drawing.Size(301, 32);
+            this.dROPCREATE文作成ToolStripMenuItem.Text = "DROP＆CREATE文作成";
             // 
             // Form1
             // 
@@ -290,10 +308,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.testdataBindingNavigator)).EndInit();
             this.testdataBindingNavigator.ResumeLayout(false);
             this.testdataBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.testdataDataGridView)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.testdataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aigsTestDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testdataDataGridView)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,8 +343,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 切り取りTToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem iNSERT文作成ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dELETE文作成ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dELETEINSERT文作成ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dROPCREATE文作成ToolStripMenuItem;
     }
 }
 
