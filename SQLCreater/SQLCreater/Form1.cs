@@ -49,5 +49,12 @@ namespace SQLCreater
         {
 
         }
+
+        private void iNSERT文作成ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string s = (string)testdataDataGridView.CurrentRow.Cells[0].Value;
+            Clipboard.SetText(s);
+            MessageBox.Show("クリップボードにコピーしました。");
+        }
     }
 }

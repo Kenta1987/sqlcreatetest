@@ -52,12 +52,12 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.testdataTableAdapter = new SQLCreater.AigsTestDataSetTableAdapters.testdataTableAdapter();
-            this.tableAdapterManager = new SQLCreater.AigsTestDataSetTableAdapters.TableAdapterManager();
             this.iNSERT文作成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETE文作成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETEINSERT文作成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dROPCREATE文作成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testdataTableAdapter = new SQLCreater.AigsTestDataSetTableAdapters.testdataTableAdapter();
+            this.tableAdapterManager = new SQLCreater.AigsTestDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.testdataBindingNavigator)).BeginInit();
             this.testdataBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.testdataBindingSource)).BeginInit();
@@ -93,7 +93,7 @@
             this.testdataBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.testdataBindingNavigator.Name = "testdataBindingNavigator";
             this.testdataBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.testdataBindingNavigator.Size = new System.Drawing.Size(628, 34);
+            this.testdataBindingNavigator.Size = new System.Drawing.Size(678, 34);
             this.testdataBindingNavigator.TabIndex = 0;
             this.testdataBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -211,12 +211,13 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
+            this.testdataDataGridView.ContextMenuStrip = this.contextMenuStrip1;
             this.testdataDataGridView.DataSource = this.testdataBindingSource;
             this.testdataDataGridView.Location = new System.Drawing.Point(12, 81);
             this.testdataDataGridView.Name = "testdataDataGridView";
             this.testdataDataGridView.RowTemplate.Height = 27;
             this.testdataDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.testdataDataGridView.Size = new System.Drawing.Size(550, 338);
+            this.testdataDataGridView.Size = new System.Drawing.Size(600, 400);
             this.testdataDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -260,21 +261,12 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(302, 132);
             // 
-            // testdataTableAdapter
-            // 
-            this.testdataTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.testdataTableAdapter = this.testdataTableAdapter;
-            this.tableAdapterManager.UpdateOrder = SQLCreater.AigsTestDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // iNSERT文作成ToolStripMenuItem
             // 
             this.iNSERT文作成ToolStripMenuItem.Name = "iNSERT文作成ToolStripMenuItem";
             this.iNSERT文作成ToolStripMenuItem.Size = new System.Drawing.Size(301, 32);
             this.iNSERT文作成ToolStripMenuItem.Text = "INSERT文作成";
+            this.iNSERT文作成ToolStripMenuItem.Click += new System.EventHandler(this.iNSERT文作成ToolStripMenuItem_Click);
             // 
             // dELETE文作成ToolStripMenuItem
             // 
@@ -294,11 +286,21 @@
             this.dROPCREATE文作成ToolStripMenuItem.Size = new System.Drawing.Size(301, 32);
             this.dROPCREATE文作成ToolStripMenuItem.Text = "DROP＆CREATE文作成";
             // 
+            // testdataTableAdapter
+            // 
+            this.testdataTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.testdataTableAdapter = this.testdataTableAdapter;
+            this.tableAdapterManager.UpdateOrder = SQLCreater.AigsTestDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 445);
+            this.ClientSize = new System.Drawing.Size(678, 545);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.testdataDataGridView);
             this.Controls.Add(this.testdataBindingNavigator);
